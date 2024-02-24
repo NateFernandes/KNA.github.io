@@ -200,6 +200,8 @@ section{
     padding: 0 50px;
     box-sizing: border-box;
     overflow: visible;
+    overflow-x: auto;
+    white-space: nowrap;
     justify-content: center;
     animation: fadeInUp 2s forwards;
 }
@@ -212,6 +214,12 @@ section{
     to {
         opacity: 1;
         transform: translateY(0); /* Move the thumbnails to their original position */
+    }
+}
+
+@media (max-width: 768px) {
+    .thumbnail .item {
+        margin: 5px; /* Adjusts margin for smaller screens */
     }
 }
 
@@ -259,7 +267,7 @@ section{
         font-size: 60px;
     }
     .arrows{
-        top: 45%;
+        top: 55%;
     }
 }a
 
