@@ -268,6 +268,7 @@ body{
 }
 
 .thumbnail .item .content{
+    font-size: 1.5rem;
     position: absolute;
     inset: auto 10px 10px 10px;
 }
