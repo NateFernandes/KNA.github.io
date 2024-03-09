@@ -26,7 +26,6 @@ function showSlider() {
 next.onclick = function() {
     itemActive = (itemActive + 1) % countItem; // Cycle to next item
     showSlider();
-    stopAutoSwitch();
 }
 
 // Event for previous button click
