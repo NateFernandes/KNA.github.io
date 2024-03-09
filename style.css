@@ -208,6 +208,7 @@ body{
     padding: 0 50px;
     box-sizing: border-box;
     overflow: visible;
+    overflow-x: auto;
     white-space: nowrap;
     justify-content: center;
     animation: fadeInUp 2s forwards;
