@@ -276,6 +276,7 @@ body{
 @media screen and (max-width: 678px) {
     .thumbnail{
         justify-content: start;
+        padding-left: 5px;
     }
     .slider .list .item .content h2{
         font-size: 60px;
