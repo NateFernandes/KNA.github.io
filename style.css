@@ -124,8 +124,10 @@ body{
 
 .slider .list .item .content h2{
     font-size: 75px;
-    font-weight: 500;
+    font-weight: 400;  
+    font-style: inherit;     
     margin: 0;
+    margin-bottom: 3rem;
 }
 
 .slider .list .item .content h3{
@@ -133,6 +135,10 @@ body{
     font-weight: 500;
     font-style: inherit;
     margin: 0;
+}
+
+.slider .list .item .content p{
+    margin-bottom: 2rem;
 }
 
 .slider .list .item.active{
@@ -273,10 +279,21 @@ body{
     }
     .slider .list .item .content h2{
         font-size: 60px;
+        line-height: 1.1;
+        margin-bottom: 3rem;
     }
     .arrows{
         top: 55%;
     }
+    .slider .list .item .content{
+        top:15%;
+        left: 5%;
+        right: 5%;
+    }
+    .slider .list .item .content p{
+        margin-bottom: 2rem;
+    }
+    
 }a
 
 
@@ -1508,5 +1525,4 @@ body{
         margin-top: 2rem;
     }
 }
-
 
