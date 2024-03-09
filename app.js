@@ -3,6 +3,7 @@ let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let thumbnails = document.querySelectorAll('.thumbnail .item');
 
+
 let countItem = items.length;
 let itemActive = 0;
 let refreshInterval = setInterval(() => {
@@ -25,12 +26,14 @@ function showSlider() {
 next.onclick = function() {
     itemActive = (itemActive + 1) % countItem; // Cycle to next item
     showSlider();
+    stopAutoSwitch();
 }
 
 // Event for previous button click
 prev.onclick = function() {
     itemActive = (itemActive - 1 + countItem) % countItem; // Cycle to previous item
     showSlider();
+    stopAutoSwitch(); // Stops the auto-run slideshow
 }
 
 // Function to stop auto-switching
@@ -45,4 +48,9 @@ thumbnails.forEach((thumbnail, index) => {
         showSlider();
         stopAutoSwitch(); // Stop auto-switching when a thumbnail is clicked
     });
+});
+
+
+document.getElementById('menu-icon').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('active');
 });
