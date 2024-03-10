@@ -8,7 +8,7 @@ let countItem = items.length;
 let itemActive = 0;
 let refreshInterval = setInterval(() => {
     next.click();
-}, 5000); // Initialize auto-switching when the page loads
+}, 7000); // Initialize auto-switching when the page loads
 
 function showSlider() {
     // Remove active class from currently active item and thumbnail
@@ -53,3 +53,4 @@ thumbnails.forEach((thumbnail, index) => {
 document.getElementById('menu-icon').addEventListener('click', function() {
     document.querySelector('.navbar').classList.toggle('active');
 });
+
