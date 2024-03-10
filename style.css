@@ -312,6 +312,15 @@ body{
     color: black;
 }
 
+
+.arrows2{
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 100;
+}
+
+
 .thumbnail{
     position: absolute;
     bottom: 5px;
@@ -487,6 +496,10 @@ body{
     font-size: 3.6rem;
     color: var(--text-color);
     display: none;
+    position: absolute;
+    top: 30%;
+    right: 8%;
+    z-index: 100;
 }
 
 .home {
@@ -1540,7 +1553,7 @@ body{
         display: none;
     }
 
-    .navbar .active{
+    .navbar.active{
         display: block;
         transform: translateX(0);
     }
