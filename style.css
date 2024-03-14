@@ -209,7 +209,7 @@ body{
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(to bottom, #000 2%, transparent);
+    background-image: linear-gradient(to bottom, #000 1%, transparent);
 }
 
 .slider2 .list .content{
