@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNA Event Management</title>
+
+    <!-- ICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html"><img src="Images/KNA_LOGO_trans.png" class="logo" img ></a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="#services">Services</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="slider2">
+        <!-- Slider content -->
+        <div class="list">
+            <div class="item active">
+                <img src="Images/Contact-us background2.jpg" alt="DJ events">
+                <div class="content">
+                    <p></p>
+                    <h2></h2>
+                    <!-- <p>Whether you're planning a corporate event, a private party, or a grand festival, 
+                        we specialize in customizing the experience to fit your occasion. Our diverse roster of DJs specializes in various genres, 
+                        from EDM and house to hip-hop and retro beats, ensuring the perfect vibe for your event's theme and audience.
+                    </p>
+
+                    <!-- Contact section -->
+                    <div class="contact">
+                        <div class="content">
+                            <div class="container">
+                                <div class="contactInfo">
+                                    <div class="box">
+                                        <div class="icon"><i class='bx bxs-map'></i></div>
+                                        <div class="text">
+                                            <h3>Location</h3>
+                                            <p>--To be filled in later--</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <div class="icon"><i class='bx bx-phone-call'></i></div>
+                                        <div class="text">
+                                            <h3>Phone</h3>
+                                            <p>--To be filled in later--</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="box">
+                                        <div class="icon"><i class='bx bx-envelope'></i></div>
+                                        <div class="text">
+                                            <h3>Email</h3>
+                                            <p>--To be filled in later--</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contactForm">
+                                    <form name="submit-to-google-sheet">
+                                        <h1>Send a Message</h1>
+                                        <div class="inputBox">
+                                            <input name="Full Name" type="text" placeholder="   Full Name" required>
+                                        </div>
+
+                                        <div class="inputBox">
+                                            <input name="Email Address" type="email" placeholder="  Email Address" required>
+                                        </div>
+
+                                        <div class="inputBox">
+                                            <input name="Mobile Number" type="number" placeholder=" Mobile Number">
+                                        </div>
+
+                                        <div class="inputBox">
+                                            <input name="Subject" type="text" placeholder=" Subject">
+                                        </div>
+
+                                        <div class="inputBox">
+                                            <textarea name="Your Message" id="" cols="30" rows="8" placeholder="  Your Message..." required></textarea>
+                                        </div>
+
+                                        <input type="submit" value="Send Message" class="btn4" onclick="validateAndSubmitForm()">
+                                        <div class="popup" id="popup">
+                                            <a href="#"><i class='bx bx-wink-smile'></i></a>
+                                            <h2>Thank You</h2>
+                                            <h5>Your details have been submitted!</h5>
+                                            <!-- <p>Your details have been submitted!</p> -->
+                                            <button type="button" onclick="closePopup()">OK</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrows for slider -->
+        <div class="arrows2">
+            <button id="prev"></button>
+            <button id="next"></button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+    <!-- Form to Google Sheet -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxPH3AqS4OVRzvwrdFgsctTikUCWxp4C8H9jMs4boj3yG7Nqg5SXM5iQZURbgBXDyvL/exec'
+        const form = document.forms['submit-to-google-sheet']
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+
+
+    </script>
+
+    
+</body>
+</html>
