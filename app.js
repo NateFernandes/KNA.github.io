@@ -54,3 +54,50 @@ document.getElementById('menu-icon').addEventListener('click', function() {
     document.querySelector('.navbar').classList.toggle('active');
 });
 
+
+
+/*----------------- Popup confirmation for form ----------------------*/ 
+
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+
+function closePopup(){
+    form.reset();   /*--------Resets the form fields ---------*/ 
+    popup.classList.remove("open-popup");
+}
+
+
+function validateAndSubmitForm() {
+    const fullName = form['Full Name'].value;
+    const emailAddress = form['Email Address'].value;
+    const mobileNumber = form['Mobile Number'].value;
+    const subject = form['Subject'].value;
+    const message = form['Your Message'].value;
+
+    // Perform validation checks here
+    if (fullName.trim() === '' || emailAddress.trim() === '' || mobileNumber.trim() === '' || subject.trim() === '' || message.trim() === '') {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    // Validate email format using a regular expression
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(emailAddress)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    // If all checks passed, reset form fields and open the popup
+    openPopup();
+}
+
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    // Call the merged validation and submission function
+    validateAndSubmitForm();
+});
