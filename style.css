@@ -204,7 +204,7 @@ body{
 
 .slider2 .list .item::after{
     content: '';
-    width: 100%;
+    width: 100vw;
     height: 100%;
     position: absolute;
     left: 0;
@@ -248,6 +248,8 @@ body{
 
 .slider2 .list .item .content p{
     margin-bottom: 0rem;
+    width: 70vw; /* Set width to 70% of the viewport width */
+    font-size: 1.5rem; /* Adjust font size as needed */
 }
 
 .slider2 .list .item.active{
@@ -541,7 +543,7 @@ body{
 
 
 
-/* Formatting for Download CV button */
+/* Formatting for the red button */
 .btn{
     display: inline-block;
     padding: 0.8rem 2.3rem;
@@ -576,78 +578,6 @@ body{
 }
 
 
-
-/* About section */
-.about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10rem;
-    background: var(--second-bg-color);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(-20px); /* You can add a small translation effect if desired */
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.about-img img{
-    width: 35vw;
-    animation: floatImage 6s ease-in-out infinite;  
-}
-
-@keyframes floatImage {
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-1.4rem);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-.heading{
-    text-align: center;
-    font-size: 4.5rem;
-}
-
-.about-content h2{
-    text-align: left;
-    line-height: 2;
-}
-
-.about-content h3{
-    text-align: left;
-    font-size: 4rem;
-    font-weight: 200;
-}
-
-.about-content span{
-    color: #ffb700;
-}
-
-.about-content i{
-    margin-left: 15px;
-    font-size: 3.7rem;
-    color: #ffb700;
-}
-
-.about-content p{
-    font-family: 'Mukta', 'Poppins';
-    font-size: 1.6rem;
-    margin: 4rem 0 6rem;
-    text-align: left;
-    font-weight: 0;
-}
-
 .btn2{
     display: inline-block;
     padding: 1rem 2.8rem;
@@ -667,447 +597,193 @@ body{
     box-shadow: none;
 }
 
-
-/* About me html page */
-.aboutme-content h2{
-    text-align: left;
-    line-height: 2;
-}
-
-.aboutme-img img{
-    width: 30vw;
-}
-
-.aboutme-content h3{
-    text-align: left;
-    font-size: 3.5rem;
-    font-weight: 200;
-    font-style: italic;
-}
-
-.aboutme-content i{
-    margin-left: 15px;
-    font-size: 4rem;
-    color: #ffb700;
-}
-
-.aboutme-content span{
-    background: linear-gradient(90deg, #e9cd2d, #a16902);
-     /* Use your desired colors */
-    background-clip: text; /* Apply gradient to text */
-    -webkit-background-clip: text; /* For webkit browsers */
-    color: transparent; /* Make text transparent to reveal gradient */
-    font-size: 5rem;
-}
-
-.aboutme-content p{
-    font-family: 'Mukta', 'Poppins';
-    background: linear-gradient(135deg, #00daf2, #c800ff);/* Use your desired colors */
-    background-clip: text; /* Apply gradient to text */
-    -webkit-background-clip: text; /* For webkit browsers */
-    color: transparent; /* Make text transparent to reveal gradient */
-    color: transparent; /* Make text transparent to reveal gradient */
-    line-height: 1.7;
-    font-size: 2rem;
-    margin: 4rem 0 6rem;
-    text-align: left;
-    font-weight: 200;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Education section */
-.tab-titles{
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between ;
-    align-items: center;
-    margin: 50px 0 50px;
-    width: 100%;
-}
-
-.tab-titles p{
-    font-family: 'Roboto Condensed', sans-serif;
-    color:rgb(0, 153, 255);
-    display: flex;
-    font-size: 50px;
-    justify-content: center;
-}
-.tab-links{
-    display: flex;
-    align-items: center;
-    font-size: 25px;
-    color: #fff;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-}
-
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 7px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s ease;
-}
-
-.tab-links.active-link::after{
-    width: 100%;
-}
-
-.tab-contents ul li{
-    line-height: 150%;
-    list-style: none;
-    margin: 40px 0; /* Distance between each line in tab info*/
-}
-
-.tab-contents ul li span{
-    text-decoration: underline;
-    color: #e9880a;
-    font-size: 30px;
-}
-
-.tab-contents{
-    display: none;
-    font-size: 2rem;
-    margin: 2rem 0 3rem;
-}
-
-.tab-contents.active-tab{
-    display: block;
-}
-
-.tab-contents.active-tab{
-    margin-top: 12rem;
-    display: flex;
-    align-items: center;
-    font-size: 25px;
-    color: #fff;
-    font-weight: 100;
-    cursor: pointer;
-    position: relative;
-}
-
-/* Continuous line separator for tab links */
-.tab-titles {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-.tab-titles::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #fff; /* You can change the color to match your design */
-    bottom: -80px;
-    left: 0;
-    box-shadow: 0 0 2rem #00d0ff;
-    color: #ff004f;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Skills */
-
-.skills{
-    background: var(--second-bg-color);
-}
-
-
-#services{
-    text-align: center;
-}
-
-#services h1{
-    color: orange;
-    background: linear-gradient(to right, #e5780a, #bc076a); /* Use your desired colors */
-    background-clip: text; /* Apply gradient to text */
-    -webkit-background-clip: text; /* For webkit browsers */
-    color: transparent; /* Make text transparent to reveal gradient */
-    font-size: 70px;
-    font-weight: 600;
-    align-items: center;
-    font-style: bold;
-}
-
-.services-list{
-    
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 100px; /*Gap space between the grids*/
-    margin-top: 50px;
-    /* margin-left: 50px;
-    margin-right: 50px; */
-    
-}
-
-.services-list a {
-    align-items: center;
-    font-style: italic;
-    color: #5100ff;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    margin-top: 15px; /* Add some space between each link */
-}
-
-.services-list h2{
-    margin-top: 100px;
-    font-size: 30px;
-    margin: 0;  /* the margin gap between icon and text */
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Description text */
-.services-list p{
-    margin-top: 20px;
-    font-size: 20px;
-    font-family:monospace;
-}
-
-.services-list div{
-    background: #262626;
-    margin-bottom: 6rem;
-    flex: 1 1 30rem;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 50px;
-    transition: background 0.5s, transform 0.5s ease;
-    box-shadow: 0 0 4.5rem var(--main-color);
-    background: linear-gradient(to right, #ff004f, #ff7300); /* Use your desired colors */
-    background-clip: text; /* Apply gradient to text */
-    -webkit-background-clip: text; /* For webkit browsers */
-    color: transparent; /* Make text transparent to reveal gradient */
-    border: 0.2rem solid var(--bg-color); /* Border outline */
-}
-
-.services-list div i{
-    color:rgb(133, 115, 234);
-    font-size: 90px;
-    margin-bottom: 30px;
-    margin-top: 10px;
-}
-
-.services-list div h2{
-    font-size: 35px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    background: linear-gradient(to right,#f06, #3cf);
-    background-clip: text; /* Apply gradient to text */
-    -webkit-background-clip: text; /* For webkit browsers */
-    color: transparent; /* Make text transparent to reveal gradient */
-}
-
-.services-list div:hover{
-    transform: translateY(-20px); 
-    background: linear-gradient(to bottom,#104382,#ff6b6b);
-    color: #fff;
-    border: 0.2rem solid var(--main-color); /* Border outline when hovered on*/
-}
-
-
-
-
-
-
-
-
-
-
-/* PORTFOLIO section */
-
-.portfolio{
-    margin-bottom: 10rem;
-}
-
-.portfolio h2{
-    margin-bottom:  4rem;
-    font-size: 70px;
-    font-weight: 550;
-    background: linear-gradient( #0004ff,#ff004f); /* Use your desired colors */
-    background-clip: text; /* Apply gradient to text */
-    -webkit-background-clip: text; /* For webkit browsers */
-    color: transparent; /* Make text transparent to reveal gradient */
-}
-
-.portfolio-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 3rem;
-    margin: 0;
-}
-
-.portfolio-container .portfolio-box{
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
-    display: flex;
-}
-
-.portfolio-box img{
-    width: 100%;
-    transition: 0.5s ease;
-}
-
-.portfolio-box:hover img{
-    transform: scale(1.1);
-}
-
-.portfolio-box .portfolio-layer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.1), rgb(51, 51, 239));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(100%);
-    transition: 0.5s ease;
-}
-
-.portfolio-box:hover .portfolio-layer{
-    transform: translateY(0);
-}
-
-.portfolio-layer h4{
-    font-size: 3rem;
-    font-weight: 500;
-}
-
-.portfolio-layer p{
-    font-size: 1.6rem;
-    margin: 0.3rem 0 1rem;
-
-}
-
-.portfolio-layer a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-}
-
-.portfolio-layer a i{
-    font-size: 2rem;
-    color: var(--second-bg-color);
-}
-
-
-
-
-
-
-
-
-
-
-/* Contact section */
-
-.contact{
-    background: var(--second-bg-color);
-}
-
-.contact h2{
-    margin-bottom: 3rem;
-    font-weight: 600;
-}
-
-.contact form{
-    max-width: 100rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.contact form .input-box{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.contact form .input-box input,
-.contact form textarea{
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
-    background: var(--bg-color);
-    border-radius: 0.8rem;
-    margin: .7rem 0;
-}
-
-.contact form .input-box input{
-    width: 49%;
-}
-
-.contact form textarea{
-    resize: none;
-}
-
-.contact form .btn3{
+/* Used in the music-events.html contact button */
+.btn3{
     display: inline-block;
-    padding: 1rem 2.8rem;
-    background: rgb(10, 233, 192);
-    border-radius: 4rem;
-    box-shadow: 0 0 1.5rem rgb(10, 233, 192);
-    font-size: 2rem;
-    color: var(--second-bg-color);
+    padding: 0.8rem 2.3rem;
+    background: rgb(196, 2, 196);
+    border-radius: 1rem;
+    box-shadow: 0 0 1.6rem rgb(196, 2, 196);
+    font-size: 1.5rem;
+    color: white;
     letter-spacing: 0.1rem;
     font-weight: 600;
-    transition :0.8s ease;
-    margin-top: 2rem;
-    cursor: pointer;
+    transition :1s ease;
+    margin-top: 1.2rem;
+    /* animation: wobble 3s ease-in-out infinite; */
+    animation: shake 5s ease-in-out infinite;
 }
 
-.contact form .btn3:hover {
+.btn3:hover {
     box-shadow: none;
 }
 
+
+.btn4{
+    display: block; /* Change display to block */
+    padding: 0.8rem 2.3rem;
+    background: #ff004f;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.6rem #ff004f;
+    font-size: 1.5rem;
+    color: var(--second-bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition :1s ease;
+    margin-top: 1.2rem;
+    margin-left: auto; /* Set left margin to auto */
+    margin-right: auto; /* Set right margin to auto */
+    /* animation: wobble 3s ease-in-out infinite; */
+    animation: shake 5s ease-in-out infinite;
+    opacity: 100%;
+}
+
+.btn4:hover {
+    box-shadow: none;
+}
+
+
+/* For the whole contact secction */
+.contact
+{
+    position: relative;
+    width: 100vw;
+    max-width: 100vw; 
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    margin-top: -47vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;     
+}
+
+/* FOR THE CONTACT FORM and location, phone and email container */
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    background-color: none;
+    border-radius: 0.8rem;
+    color: var(--second-bg-color);
+    /* opacity: 90%; */
+}
+
+.container .contactInfo{
+    width: 50%;
+    margin-left: -20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+/*For the p text on the contact page*/
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+}
+
+.container .contactInfo .box .text{
+    display: block;
+    margin-left: 20px;
+    font-size: 16px;
+    color: var(--second-bg-color);
+}
+
+.container .contactInfo .box .text p{
+    font-weight: 100;
+    color: rgb(0, 255, 247);
+    font-size: 1.5rem;
+    display: block;
+    margin: 0;
+}
+
+.container .contactInfo .box .text h3{
+    font-weight: 400;
+    color: white;
+    font-size: 4rem;
+    display: block;
+    margin: 0;
+}
+
+
+
+
+/* for the contact form */
+.contactForm{
+    width: 40vw;
+    padding: 4rem;
+    margin-left: 20%;
+    margin-right: -40%;
+    margin-top: 10%;
+    /* margin-bottom: %; */
+    background: var(--bg-color);
+    border-radius: 2.5rem;
+    border: 0.2rem solid var(--main-color);
+    box-shadow: 0 0 0.8rem rgb(128, 0, 0);
+    opacity: 90%;
+}
+
+.contactForm h1{
+    font-weight: 500;
+    color: white;
+    margin-top: -3%;
+    text-align: center;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* contact form fields */
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;    
+}
+
+.contactForm .inputBox input{
+    
+    width: 100%;
+    padding: 5px 0;
+    font-size: 15px;
+    margin: 10px 0;
+    border: 2px solid #333;
+    border-radius: 1rem;
+    outline: none;
+    background-color: var(--second-bg-color);
+    
+}
+
+.inputBox textarea {
+    width: 100%;
+    border-radius:  1rem;
+    background-color: var(--second-bg-color);
+    color: white;
+}
+
+.inputBox input{
+    color: white;
+}
+
+
+/* Popup notification */
 .popup{
     width: 600px;
     background: #2d2e2f;
@@ -1126,7 +802,7 @@ body{
 .open-popup{
     visibility: visible;
     top: 50%;
-    transform: translate(-50%, -50%) scale(1)
+    transform: translate(-50%, 50vh) scale(1)
 }
 
 .popup{
@@ -1135,24 +811,35 @@ body{
     font-weight: 500;
 }
 
+/* For "Thank you" text */
 .popup h2{
     font-family: 'Montserrat';
     color: #fff;
     font-size: 4rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 20px;
+}
+
+/* h5 for the "Your details have been submitted" */
+.popup h5{
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 10px;
 }
 
 .popup a i{
     font-size: 8rem;
-    color: #00d0ff;
+    color: #7700ff;
     margin-top: 2rem;
     border-radius: 70%;
 }
 
 .popup p{
     font-size: 1.8rem;
-    margin-top: -20px;}
+    margin-top: -20px;
+}
 
 .popup button{
     width: 100%;
@@ -1167,12 +854,6 @@ body{
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
-
-
-
-
-
-
 
 
 
